@@ -3,17 +3,11 @@ import { cn } from "../lib/utils";
 import { useState, useEffect } from "react";
 import { BentoGrid, BentoGridItem } from "./bento-grid";
 import {
-  IconBoxAlignRightFilled,
   IconBrandInstagram,
-  IconClipboardCopy,
   IconCpu,
   IconDeviceMobile,
-  IconFileBroken,
   IconGlobe,
   IconLayoutDashboard,
-  IconSignature,
-  IconTableColumn,
-  IconTrendingUp,
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -293,7 +287,9 @@ const SkeletonFive = () => {
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Smart AI tools for content, analysis, and automation.</p>
+        <p className="text-xs text-neutral-500">
+          Smart AI tools for content, analysis, and automation.
+        </p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
       </motion.div>
     </motion.div>
