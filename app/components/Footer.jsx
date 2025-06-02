@@ -31,7 +31,7 @@ export function Footer() {
               We provide exceptional services to help your business grow and
               succeed in today's competitive market.
             </p>
-            <div className="flex space-x-4 pt-2">
+            {/* <div className="flex space-x-4 pt-2">
               <Link
                 href="#"
                 className="text-gray-400 transition-colors hover:text-white"
@@ -53,7 +53,7 @@ export function Footer() {
                 <IconBrandInstagram size={20} />
                 <span className="sr-only">Instagram</span>
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Our Services */}
@@ -98,6 +98,14 @@ export function Footer() {
                   className="text-gray-400 transition-colors hover:text-white"
                 >
                   Ai Modeling
+                </Link>
+              </li>
+               <li>
+                <Link
+                  href="/services"
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
+                  RPA
                 </Link>
               </li>
             </ul>

@@ -45,6 +45,11 @@ export const products = [
     link: "#",
     thumbnail: "/images/design-3.jpg",
   },
+  {
+    title: "RPA",
+    link: "#",
+    thumbnail: "/images/rpa-2.jpg",
+  },
 ];
 export const navItems = [
   { name: "Home", link: "/" },

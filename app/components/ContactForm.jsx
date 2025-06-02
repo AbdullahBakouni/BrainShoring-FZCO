@@ -9,15 +9,15 @@ const ContactForm = () => {
     window.location.href = "tel:+971501046487";
     setIsModalOpen(false);
   };
-
   const handleEmailClick = () => {
-    window.location.href = "mailto:contact@company.com";
+    window.location.href = "mailto:info@Brainshoring.com";
     setIsModalOpen(false);
   };
+
   return (
     <>
       <div className="min-h-screen flex items-center justify-center">
-        <div className="relative z-20 max-w-md mx-auto p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-2xl">
+        <div className="relative z-20 max-w-sm mx-auto p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-2xl">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-2">
               Contact Us
@@ -79,7 +79,7 @@ const ContactForm = () => {
                   Email
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  contact@company.com
+                  info@Brainshoring.com
                 </p>
               </div>
             </div>

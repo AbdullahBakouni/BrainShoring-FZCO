@@ -8,6 +8,7 @@ import {
   IconDeviceMobile,
   IconGlobe,
   IconLayoutDashboard,
+  IconRobot,
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -295,6 +296,93 @@ const SkeletonFive = () => {
     </motion.div>
   );
 };
+
+const SkeletonSix = () => {
+  const first = {
+    initial: {
+      x: 20,
+      rotate: -5,
+    },
+    hover: {
+      x: 0,
+      rotate: 0,
+    },
+  };
+  const second = {
+    initial: {
+      x: -20,
+      rotate: 5,
+    },
+    hover: {
+      x: 0,
+      rotate: 0,
+    },
+  };
+
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      whileHover="hover"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
+    >
+      <motion.div
+        variants={first}
+        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+      >
+        <Image
+          src="/images/rpa.jpg"
+          alt="RPA Icon"
+          height="100"
+          width="100"
+          className="rounded-full h-10 w-10"
+        />
+        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+          Automate repetitive tasks
+        </p>
+        <p className="border border-blue-500 bg-blue-100 dark:bg-blue-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          Productivity
+        </p>
+      </motion.div>
+
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
+        <Image
+          src="/images/rpa-2.jpg"
+          alt="RPA Process"
+          height="100"
+          width="100"
+          className="rounded-full h-10 w-10"
+        />
+        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+          Reduce human errors
+        </p>
+        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          Accuracy
+        </p>
+      </motion.div>
+
+      <motion.div
+        variants={second}
+        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+      >
+        <Image
+          src="/images/ai2.jpg"
+          alt="AI and Automation"
+          height="100"
+          width="100"
+          className="rounded-full h-10 w-10"
+        />
+        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+          Save time and resources
+        </p>
+        <p className="border border-purple-500 bg-purple-100 dark:bg-purple-900/20 text-purple-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          Efficiency
+        </p>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 const items = [
   {
     title: "Web Development",
@@ -356,5 +444,18 @@ const items = [
     header: <SkeletonFive />,
     className: "md:col-span-1",
     icon: <IconCpu className="h-4 w-4 text-neutral-500" />,
+  },
+
+  {
+    title: "Robotic Process Automation (RPA)",
+    description: (
+      <span className="text-sm">
+        We streamline tasks like invoicing, email handling, and file management
+        using UiPath & Automation Anywhere.
+      </span>
+    ),
+    header: <SkeletonSix />,
+    className: "md:col-span-2",
+    icon: <IconRobot className="h-4 w-4 text-neutral-500" />,
   },
 ];

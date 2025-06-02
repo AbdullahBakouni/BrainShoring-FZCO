@@ -38,6 +38,14 @@ export function FeaturesSectionDemo() {
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
+
+    {
+      title: "Robotic Process Automation (RPA)",
+      description:
+        "We help businesses automate tasks like invoicing, email processing, and file management using platforms like UiPath and Automation Anywhere — boosting efficiency, accuracy, and growth.",
+      skeleton: <SkeletonFive />,
+      className: "col-span-1 lg:col-span-2 border-b lg:border-none",
+    },
   ];
 
   return (
@@ -232,6 +240,30 @@ export const SkeletonFour = () => {
     </div>
   );
 };
+
+
+export const SkeletonFive = () => {
+  return (
+    <Link
+      href="/services"
+      className="relative flex gap-10 h-full group/image"
+    >
+      <div className="w-full mx-auto bg-transparent dark:bg-transparent group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2">
+          {/* TODO */}
+          <Image
+            src="/images/rpa-2.jpg"
+            alt="header"
+            width={800}
+            height={800}
+            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+          />
+        </div>
+      </div>
+    </Link>
+  );
+};
+
 
 export const Globe = ({ className }) => {
   const canvasRef = useRef(null);
